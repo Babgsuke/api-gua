@@ -1,0 +1,7 @@
+const express = require("express");
+const router = express.Router();
+const sshController = require("../controller/createSshController.js");
+
+router.post("/vless/create", sshController.createSsh);
+
+module.exports = router;
