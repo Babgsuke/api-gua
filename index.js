@@ -33,6 +33,6 @@ app.use("/api", sshRoutes);
 app.use("/api", vlessRoutes);
 app.use("/api", troRoutes);
 
-app.listen(3000, "0.0.0.0", () => {
+app.listen(3000, () => {
   console.log("✅ API running on port 3000");
 });

@@ -28,13 +28,6 @@ exports.createSsh = async (req, res) => {
         });
       }
 
-      if (stderr) {
-        return res.status(500).json({
-          success: false,
-          message: stderr
-        });
-      }
-
       const links = stdout.match(/vmess:\/\/[^\s]+/g) || [];
 
       if (links.length === 0) {
